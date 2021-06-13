@@ -14,8 +14,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "2rem",
   },
   imText: {
-    fontSize: "1.5rem",
+    fontSize: "4rem",
     fontFamily: "cursive",
+    opacity: "0.6",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.5rem",
+    },
   },
   realTypingAnim: {
     fontSize: "3.5rem",
@@ -67,7 +71,7 @@ const HeaderBanner = () => {
             <div className={classes.imText}> I'm a: </div>
             <div className={classes.realTypingAnim}>
               <ReactTypingEffect
-                typingDelay={`1500ms`}
+                typingDelay="500ms"
                 text={[
                   "Software Engineer.",
                   "Product Designer.",
