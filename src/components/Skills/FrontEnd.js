@@ -18,10 +18,16 @@ const useStyle = makeStyles((theme) => ({
   imgSkill: {
     width: "9rem",
     margin: "0 auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "4rem",
+    },
   },
   imgSkillb: {
     width: "12rem",
     margin: "0 auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "6rem",
+    },
   },
 }));
 
