@@ -9,7 +9,10 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
 import PaletteIcon from "@material-ui/icons/Palette";
 import Typography from "@material-ui/core/Typography";
+import BuildIcon from "@material-ui/icons/Build";
 import Box from "@material-ui/core/Box";
+
+import FrontEnd from "../Skills/FrontEnd";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -77,15 +80,16 @@ const SkillsTab = () => {
           <Tab label="Front-End" icon={<PaletteIcon />} {...a11yProps(0)} />
           <Tab label="Back-End" icon={<CodeIcon />} {...a11yProps(1)} />
           <Tab
-            label="CMS / Database"
+            label="CMS/Database"
             icon={<ShoppingCartIcon />}
             {...a11yProps(2)}
           />
           <Tab label="Web Dev" icon={<VpnKeyIcon />} {...a11yProps(3)} />
+          <Tab label="Soft Skills" icon={<BuildIcon />} {...a11yProps(4)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        Item One
+      <TabPanel style={{ margin: "0 auto" }} value={value} index={0}>
+        <FrontEnd />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
@@ -95,6 +99,9 @@ const SkillsTab = () => {
       </TabPanel>
       <TabPanel value={value} index={3}>
         Item Four
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        gitem five
       </TabPanel>
     </div>
   );
