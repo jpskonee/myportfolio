@@ -5,7 +5,7 @@ import ContactUs from "../src/components/Contact us/ContactUs";
 import AboutUs from "../src/components/About Us/AboutUs";
 import Projects from "../src/components/Projects/Projects";
 import RecentWork from "../src/components/Projects/RecentWork";
-import Skills from "../src/components/Skills/Skills";
+import SkillsTab from "../src/components/Skills/SkillsTab";
 import Testimonial from "../src/components/Testimonies/Testimonial";
 import HomePage from "../src/components/homepage/Homepage";
 import "./App.css";
@@ -21,7 +21,7 @@ function App() {
             <Route exact component={AboutUs} path="/about" />
             <Route exact component={Projects} path="/Projects" />
             <Route exact component={RecentWork} path="/work" />
-            <Route exact component={Skills} path="/Skills" />
+            <Route exact component={SkillsTab} path="/Skills" />
             <Route exact component={Testimonial} path="/testimonials" />
             <Route exact component={HomePage} path="/" />
             <Route exact component={HomePage} path="/404" />
