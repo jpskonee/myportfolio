@@ -22,9 +22,23 @@ a {
   }
 }
 
-#nav-btn-about,
+/* #nav-btn-about,
 #nav-btn-skill,
 #nav-btn-work,
 #nav-btn-contact {
   color: white;
+} */
+
+.page-logo {
+  width: 11rem;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 760px) {
+  .page-logo {
+    width: 8rem;
+  }
+  .page-logo-div {
+    margin-left: 2rem;
+  }
 }

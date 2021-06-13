@@ -23,6 +23,7 @@ import { DoneAll } from "@material-ui/icons";
 import HomeIcon from "@material-ui/icons/Home";
 import CreateNewFolderIcon from "@material-ui/icons/CreateNewFolder";
 import CloseIcon from "@material-ui/icons/Close";
+import logo from "../assest/agho_dev.jpeg";
 
 const drawerWidth = 260;
 
@@ -109,7 +110,7 @@ export default function PersistentDrawerLeft(props) {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        style={{ background: "teal" }}
+        style={{ background: "white" }}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -123,14 +124,17 @@ export default function PersistentDrawerLeft(props) {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <MenuIcon />
+            <MenuIcon style={{ color: "black" }} />
           </IconButton>
           <div className={classes.appbarMenu}>
             <div>
               <Link to="/">
-                <Typography variant="h5" noWrap>
+                <div className="page-logo-div">
+                  <img className="page-logo" src={logo} alt="logo" />
+                </div>
+                {/* <Typography variant="h5" noWrap>
                   AGHO.DEV
-                </Typography>
+                </Typography> */}
               </Link>
             </div>
             <div className="appbar-element">
