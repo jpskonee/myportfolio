@@ -71,8 +71,8 @@ const SkillsTab = () => {
           scrollButtons="on"
           indicatorColor="primary"
           textColor="primary"
-          aria-label="scrollable force tabs example"
-          centered
+          variant="scrollable"
+          style={{ margin: "0 auto" }}
         >
           <Tab label="Front-End" icon={<PaletteIcon />} {...a11yProps(0)} />
           <Tab label="Back-End" icon={<CodeIcon />} {...a11yProps(1)} />
