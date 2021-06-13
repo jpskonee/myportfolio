@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     fontFamily: "cursive",
   },
   realTypingAnim: {
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     color: "teal",
   },
   textPart: {
@@ -29,12 +29,6 @@ const useStyles = makeStyles({
     width: "90%",
   },
   slideBg: {
-    background: "rgba( 255, 255, 255, 0.25 )",
-    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-    backdropFilter: "blur( 0.0px )",
-    webkitBackdropFilter: "blur( 0.0px )",
-    borderRadius: "10px",
-    border: "1px solid rgba( 255, 255, 255, 0.18 )",
     width: "100%",
     padding: "50px 0",
   },
@@ -44,7 +38,7 @@ const Homepage = () => {
   const classes = useStyles();
 
   return (
-    <div class={classes.slideBg}>
+    <div className={`${classes.slideBg} glass-bg`}>
       <Grid container>
         <Grid item xs="12" sm="1"></Grid>
         <Grid className={classes.textPart} item xs="12" sm="5">
