@@ -24,6 +24,7 @@ function App() {
             <Route exact component={Skills} path="/Skills" />
             <Route exact component={Testimonial} path="/testimonials" />
             <Route exact component={HomePage} path="/" />
+            <Route exact component={HomePage} path="/404" />
           </Container>
         </Switch>
       </NavBar>
