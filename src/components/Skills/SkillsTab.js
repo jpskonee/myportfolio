@@ -6,7 +6,6 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import CodeIcon from "@material-ui/icons/Code";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import StorageIcon from "@material-ui/icons/Storage";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
 import PaletteIcon from "@material-ui/icons/Palette";
 import Typography from "@material-ui/core/Typography";
@@ -77,9 +76,12 @@ const SkillsTab = () => {
         >
           <Tab label="Front-End" icon={<PaletteIcon />} {...a11yProps(0)} />
           <Tab label="Back-End" icon={<CodeIcon />} {...a11yProps(1)} />
-          <Tab label="C.M.S" icon={<ShoppingCartIcon />} {...a11yProps(2)} />
-          <Tab label="Database" icon={<StorageIcon />} {...a11yProps(3)} />
-          <Tab label="Web Dev" icon={<VpnKeyIcon />} {...a11yProps(4)} />
+          <Tab
+            label="CMS / Database"
+            icon={<ShoppingCartIcon />}
+            {...a11yProps(2)}
+          />
+          <Tab label="Web Dev" icon={<VpnKeyIcon />} {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -93,9 +95,6 @@ const SkillsTab = () => {
       </TabPanel>
       <TabPanel value={value} index={3}>
         Item Four
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item Five
       </TabPanel>
     </div>
   );
