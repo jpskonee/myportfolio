@@ -17,8 +17,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyle = makeStyles((theme) => ({
   imgSkill: {
     width: "9rem",
-    margin: "0 auto",
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
       width: "4rem",
     },
@@ -28,6 +27,7 @@ const useStyle = makeStyles((theme) => ({
     margin: "0 auto",
     padding: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
+      padding: theme.spacing(0),
       width: "6.5rem",
     },
   },
@@ -36,7 +36,7 @@ const useStyle = makeStyles((theme) => ({
 const FrontEnd = () => {
   const classes = useStyle();
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div>
       <Grid container>
         <Grid item md="3" xs="4">
           <img className={classes.imgSkill} src={html} alt="Skills-icon" />

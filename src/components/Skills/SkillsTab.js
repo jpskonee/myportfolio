@@ -74,8 +74,7 @@ const SkillsTab = () => {
           scrollButtons="on"
           indicatorColor="primary"
           textColor="primary"
-          variant="scrollable"
-          style={{ margin: "0 auto" }}
+          style={{ margin: "0 auto",maxWidth: "100%" }}
         >
           <Tab label="Front-End" icon={<PaletteIcon />} {...a11yProps(0)} />
           <Tab label="Back-End" icon={<CodeIcon />} {...a11yProps(1)} />
