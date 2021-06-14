@@ -46,13 +46,16 @@ const useStyles = makeStyles((theme) => ({
     left: "40px",
     bottom: "40px",
     opacity: "0.5",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       display: "none",
     },
   },
   slideBg: {
     width: "100%",
-    padding: "50px 0",
+    padding: "15px 0",
+    [theme.breakpoints.down("xs")]: {
+      padding: "10px",
+    },
   },
 }));
 

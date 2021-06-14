@@ -49,12 +49,10 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "100%",
-    flexGrow: 1,
+    maxWidth: "100%",
     backgroundColor: theme.palette.background.paper,
     marginTop: theme.spacing(3),
   },
-  rootDiv: {},
 }));
 
 const SkillsTab = () => {
@@ -74,7 +72,8 @@ const SkillsTab = () => {
           scrollButtons="on"
           indicatorColor="primary"
           textColor="primary"
-          style={{ margin: "0 auto",maxWidth: "100%" }}
+          variant="scrollable"
+          style={{ margin: "0 auto", maxWidth: "100%" }}
         >
           <Tab label="Front-End" icon={<PaletteIcon />} {...a11yProps(0)} />
           <Tab label="Back-End" icon={<CodeIcon />} {...a11yProps(1)} />
