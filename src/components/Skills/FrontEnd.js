@@ -18,6 +18,7 @@ const useStyle = makeStyles((theme) => ({
   imgSkill: {
     width: "9rem",
     margin: "0 auto",
+    padding: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
       width: "4rem",
     },
@@ -25,6 +26,7 @@ const useStyle = makeStyles((theme) => ({
   imgSkillb: {
     width: "12rem",
     margin: "0 auto",
+    padding: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
       width: "6.5rem",
     },
@@ -36,48 +38,48 @@ const FrontEnd = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Grid container>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkill} src={html} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkill} src={css} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkill} src={bootstrap} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkill} src={js} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkill} src={jquery} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkillb} src={ejs} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkill} src={sass} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkillb} src={tailwind} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img className={classes.imgSkill} src={react} alt="Skills-icon" />
         </Grid>
-        <Grid item md="3" sm="3">
+        <Grid item md="3" xs="4">
           <img
             className={classes.imgSkillb}
             src={reactNative}
             alt="Skills-icon"
           />
         </Grid>
-        <Grid item md="2" sm="3">
+        <Grid item md="2" xs="3">
           <img
             className={classes.imgSkillb}
             src={materialUi}
             alt="Skills-icon"
           />
         </Grid>
-        <Grid item md="2" sm="3">
+        <Grid item md="2" xs="3">
           <img className={classes.imgSkillb} src={antd} alt="Skills-icon" />
         </Grid>
       </Grid>
