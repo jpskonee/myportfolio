@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
   imText: {
     fontSize: "4rem",
     fontFamily: "cursive",
-    opacity: "0.6",
+    opacity: "0.8",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },
   },
   realTypingAnim: {
-    fontSize: "3.5rem",
+    fontSize: "3.7rem",
     color: "teal",
     [theme.breakpoints.down("sm")]: {
       fontSize: "2rem",
@@ -32,22 +32,31 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: "2.5rem",
+    },
   },
   proImg: {
     width: "90%",
     borderRadius: "0 0 150px 0",
-    [theme.breakpoints.down("sm")]: {
-      borderRadius: "0",
+    opacity: "1.8",
+    [theme.breakpoints.down("xs")]: {
+      borderRadius: "0 0 0 0px",
     },
   },
   squareDots: {
-    width: "9rem",
+    width: "7rem",
     position: "absolute",
     left: "40px",
     bottom: "40px",
-    opacity: "0.5",
+    opacity: "0.6",
     [theme.breakpoints.down("xs")]: {
-      display: "none",
+      // display: "none",
+      width: "4rem",
+      position: "absolute",
+      left: "6px",
+      bottom: "10px",
+      opacity: "0.5",
     },
   },
   root: {
@@ -57,6 +66,12 @@ const useStyles = makeStyles((theme) => ({
       padding: "0",
       margin: "0",
     },
+  },
+  centerEvery: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "0 auto",
   },
 }));
 
@@ -68,7 +83,7 @@ const HeaderBanner = () => {
       style={{ position: "relative" }}
       className={`${classes.root} glass-bg`}
     >
-      <Grid container>
+      <Grid container className={classes.centerEvery}>
         <Grid item xs="12" sm="1"></Grid>
         <Grid className={classes.textPart} item xs="12" sm="5">
           <div className={classes.namePart}>
@@ -88,7 +103,7 @@ const HeaderBanner = () => {
           </div>
         </Grid>
         <Grid item xs="12" sm="5">
-          <div>
+          <div className={classes.centerEvery}>
             {" "}
             <img
               className={classes.proImg}

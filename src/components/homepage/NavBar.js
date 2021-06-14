@@ -15,7 +15,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button, Switch } from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import CodeIcon from "@material-ui/icons/Code";
 import CallIcon from "@material-ui/icons/Call";
@@ -32,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     maxWidth: "100%",
   },
-
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
@@ -94,10 +93,13 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  a: {
+    color: theme.palette.default,
+  },
 }));
 
 export default function PersistentDrawerLeft(props) {
-  const { children } = props;
+  const { children, mode, setMode } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -110,11 +112,15 @@ export default function PersistentDrawerLeft(props) {
     setOpen(false);
   };
 
+  const handleMode = () => {
+    setMode(!mode);
+  };
+
   return (
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        style={{ background: "white" }}
+        color="default"
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -128,7 +134,7 @@ export default function PersistentDrawerLeft(props) {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <MenuIcon style={{ color: "black" }} />
+            <MenuIcon />
           </IconButton>
           <div className={classes.appbarMenu}>
             <div>
@@ -143,25 +149,40 @@ export default function PersistentDrawerLeft(props) {
             </div>
             <div className="appbar-element">
               <Link to="about">
-                <Button id="nav-btn-about" startIcon={<AccountCircleIcon />}>
+                <Button
+                  size="small"
+                  id="nav-btn-about"
+                  startIcon={<AccountCircleIcon />}
+                >
                   About Us
                 </Button>
               </Link>
               <Link to="skills">
-                <Button id="nav-btn-skill" startIcon={<CodeIcon />}>
+                <Button
+                  size="small"
+                  id="nav-btn-skill"
+                  startIcon={<CodeIcon />}
+                >
                   SKills
                 </Button>
               </Link>
               <Link to="work">
-                <Button id="nav-btn-work" startIcon={<DoneAll />}>
+                <Button size="small" id="nav-btn-work" startIcon={<DoneAll />}>
                   Work
                 </Button>
               </Link>
               <Link to="contact">
-                <Button id="nav-btn-contact" startIcon={<CallIcon />}>
+                <Button
+                  size="small"
+                  id="nav-btn-contact"
+                  startIcon={<CallIcon />}
+                >
                   Let's Work
                 </Button>
               </Link>
+            </div>
+            <div>
+              <Switch color="default" checked={mode} onChange={handleMode} />
             </div>
           </div>
         </Toolbar>

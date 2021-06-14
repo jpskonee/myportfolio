@@ -1,12 +1,16 @@
 import React from "react";
-// import SkillsTab from "../Skills/SkillsTab";
+import SkillsTab from "../Skills/SkillsTab";
 import HeaderBanner from "./HeaderBanner";
 
 const homepage = () => {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <HeaderBanner />
-      {/* <SkillsTab /> */}
+      <SkillsTab />
+      <h1 style={{ position: "fixed", bottom: "0.5rem", right: "4vw" }}>
+        {" "}
+        chat
+      </h1>
     </div>
   );
 };
