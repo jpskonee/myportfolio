@@ -30,6 +30,7 @@ const drawerWidth = 260;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    flexGrow: "1",
   },
 
   appBar: {
