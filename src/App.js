@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
 
-  const [mode, setMode] = React.useState(true);
+  const [mode, setMode] = React.useState(false);
 
   const theme = createMuiTheme({
     palette: {
