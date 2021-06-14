@@ -10,13 +10,31 @@ import Testimonial from "../src/components/Testimonies/Testimonial";
 import HomePage from "../src/components/homepage/Homepage";
 import "./App.css";
 import { Container } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  [theme.breakpoints.down("xs")]: {
+    root: {
+      padding: "0",
+      margin: "0",
+    },
+    maxWidthLg: {
+      padding: "0",
+      margin: "0",
+    },
+  },
+}));
 
 function App() {
+  const classes = useStyles();
   return (
     <div className="App">
       <NavBar>
         <Switch>
-          <Container maxWidth="lg">
+          <Container
+            className={`${classes.root} ${classes.maxWidthLg}`}
+            maxWidth="lg"
+          >
             <Route exact component={ContactUs} path="/contact" />
             <Route exact component={AboutUs} path="/about" />
             <Route exact component={Projects} path="/Projects" />

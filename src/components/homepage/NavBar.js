@@ -30,7 +30,7 @@ const drawerWidth = 260;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    flexGrow: "1",
+    maxWidth: "100%",
   },
 
   appBar: {
@@ -78,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(2, 0),
+    [theme.breakpoints.down("xs")]: {
+      padding: theme.spacing(0.5, 0),
+    },
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,

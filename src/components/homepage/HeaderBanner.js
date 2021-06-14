@@ -50,12 +50,12 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-  slideBg: {
-    width: "100%",
+  root: {
+    maxWidth: "100%",
     padding: "15px 0",
-    flexGrow: "1",
     [theme.breakpoints.down("xs")]: {
       padding: "0",
+      margin: "0",
     },
   },
 }));
@@ -66,7 +66,7 @@ const HeaderBanner = () => {
   return (
     <div
       style={{ position: "relative" }}
-      className={`${classes.slideBg} glass-bg`}
+      className={`${classes.root} glass-bg`}
     >
       <Grid container>
         <Grid item xs="12" sm="1"></Grid>

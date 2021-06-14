@@ -6,7 +6,7 @@ const homepage = () => {
   return (
     <div>
       <HeaderBanner />
-      <SkillsTab />
+      {/* <SkillsTab /> */}
     </div>
   );
 };
