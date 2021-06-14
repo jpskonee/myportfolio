@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsTab from "../Skills/SkillsTab";
+// import SkillsTab from "../Skills/SkillsTab";
 import HeaderBanner from "./HeaderBanner";
 
 const homepage = () => {
