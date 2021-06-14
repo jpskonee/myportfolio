@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     padding: "15px 0",
     [theme.breakpoints.down("xs")]: {
-      padding: "10px",
+      padding: "0",
     },
   },
 }));
