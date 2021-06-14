@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
   slideBg: {
     width: "100%",
     padding: "15px 0",
+    flexGrow: "1",
     [theme.breakpoints.down("xs")]: {
       padding: "0",
     },
