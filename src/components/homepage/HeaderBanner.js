@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#f50057",
     fontStyle: "cursive",
     fontWeight: "bolder",
+    [theme.breakpoints.only("md")]: {
+      fontSize: "3rem",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.6rem",
     },
@@ -108,15 +111,15 @@ const HeaderBanner = () => {
               <ReactTypingEffect
                 typingDelay="500ms"
                 text={[
-                  "Agho Emmanuel .E.",
-                  "A Software Engineer.",
-                  "Agho Emmanuel.",
+                  "Agho Emmanuel",
+                  "A Software Engr.",
+                  "Agho Emmanuel",
                   "A Product Designer.",
-                  "Agho Emmanuel.",
+                  "Agho Emmanuel",
                   "An I.T Consultant.",
-                  "Agho Emmanuel.",
+                  "Agho Emmanuel",
                   "A STEM Educator.",
-                  "Agho Emmanuel.",
+                  "Agho Emmanuel",
                   "A Technopreneur.",
                 ]}
               />
