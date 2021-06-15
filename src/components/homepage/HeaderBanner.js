@@ -2,7 +2,7 @@ import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core";
-import profilepics from "../assest/agho.png";
+import profilepics from "../assest/agho1.png";
 import sqauredots from "../assest/square-dots.png";
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   realTypingAnim: {
-    fontSize: "3.7rem",
+    fontSize: "3.5rem",
     color: "teal",
     [theme.breakpoints.down("sm")]: {
       fontSize: "2rem",
@@ -37,11 +37,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   proImg: {
-    width: "90%",
+    width: "350px",
+    height: "320px",
     borderRadius: "0 0 150px 0",
     opacity: "1.8",
     [theme.breakpoints.down("xs")]: {
       borderRadius: "0 0 0 0px",
+      width: "200px",
+      height: "150px",
     },
   },
   squareDots: {
@@ -71,7 +74,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "0 auto",
+    padding: "3rem",
+    width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      padding: "0.5rem 0",
+    },
   },
 }));
 
@@ -84,8 +91,8 @@ const HeaderBanner = () => {
       className={`${classes.root} glass-bg`}
     >
       <Grid container className={classes.centerEvery}>
-        <Grid item xs="12" sm="1"></Grid>
-        <Grid className={classes.textPart} item xs="12" sm="5">
+        <Grid item md="1" xs="12" sm="1"></Grid>
+        <Grid className={classes.textPart} item xs="12" md="6" sm="6">
           <div className={classes.namePart}>
             <div className={classes.imText}> I'm a: </div>
             <div className={classes.realTypingAnim}>
@@ -102,7 +109,7 @@ const HeaderBanner = () => {
             </div>
           </div>
         </Grid>
-        <Grid item xs="12" sm="5">
+        <Grid item md="3" xs="12" sm="4">
           <div className={classes.centerEvery}>
             {" "}
             <img
@@ -120,7 +127,7 @@ const HeaderBanner = () => {
             </div>
           </div>
         </Grid>
-        <Grid item xs="12" sm="1"></Grid>
+        <Grid item md="1" xs="12" sm="1"></Grid>
       </Grid>
     </div>
   );

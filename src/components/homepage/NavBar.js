@@ -15,7 +15,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import { Link } from "react-router-dom";
-import { Button, Switch } from "@material-ui/core";
+import { Button, Switch, Grid } from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import CodeIcon from "@material-ui/icons/Code";
 import CallIcon from "@material-ui/icons/Call";
@@ -23,7 +23,7 @@ import { DoneAll } from "@material-ui/icons";
 import HomeIcon from "@material-ui/icons/Home";
 import CreateNewFolderIcon from "@material-ui/icons/CreateNewFolder";
 import CloseIcon from "@material-ui/icons/Close";
-import logo from "../assest/agho_dev.jpeg";
+import logo from "../assest/agho_dev.png";
 
 const drawerWidth = 260;
 
@@ -37,13 +37,6 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-  },
-  appbarMenu: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    color: "white",
-    width: "100%",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -94,7 +87,30 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
   },
   a: {
-    color: theme.palette.default,
+    color: "black",
+    textDecoration: "none",
+  },
+  appbarMenu: {
+    color: "white",
+    width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+  },
+  appBarElement: {
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  switchDiv: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
@@ -137,53 +153,77 @@ export default function PersistentDrawerLeft(props) {
             <MenuIcon />
           </IconButton>
           <div className={classes.appbarMenu}>
-            <div>
-              <Link to="/">
-                <div className="page-logo-div">
-                  <img className="page-logo" src={logo} alt="logo" />
-                </div>
-                {/* <Typography variant="h5" noWrap>
+            <Grid container>
+              <Grid item lg="1" md="1" sm="1" xs="1">
+                <Link to="/">
+                  <div className="page-logo-div">
+                    <img className="page-logo" src={logo} alt="logo" />
+                  </div>
+                  {/* <Typography variant="h5" noWrap>
                   AGHO.DEV
                 </Typography> */}
-              </Link>
-            </div>
-            <div className="appbar-element">
-              <Link to="about">
-                <Button
-                  size="small"
-                  id="nav-btn-about"
-                  startIcon={<AccountCircleIcon />}
-                >
-                  About Us
-                </Button>
-              </Link>
-              <Link to="skills">
-                <Button
-                  size="small"
-                  id="nav-btn-skill"
-                  startIcon={<CodeIcon />}
-                >
-                  SKills
-                </Button>
-              </Link>
-              <Link to="work">
-                <Button size="small" id="nav-btn-work" startIcon={<DoneAll />}>
-                  Work
-                </Button>
-              </Link>
-              <Link to="contact">
-                <Button
-                  size="small"
-                  id="nav-btn-contact"
-                  startIcon={<CallIcon />}
-                >
-                  Let's Work
-                </Button>
-              </Link>
-            </div>
-            <div>
-              <Switch color="default" checked={mode} onChange={handleMode} />
-            </div>
+                </Link>
+              </Grid>
+              <Grid item lg="3" md="2" sm="3" xs="3"></Grid>
+              <Grid
+                item
+                className={classes.appBarElement}
+                lg="4"
+                md="6"
+                sm="4"
+                xs="4"
+              >
+                <Link to="about">
+                  <Button
+                    size="small"
+                    id="nav-btn-about"
+                    startIcon={<AccountCircleIcon />}
+                  >
+                    About Us
+                  </Button>
+                </Link>
+                <Link to="skills">
+                  <Button
+                    size="small"
+                    id="nav-btn-skill"
+                    startIcon={<CodeIcon />}
+                  >
+                    SKills
+                  </Button>
+                </Link>
+                <Link to="work">
+                  <Button
+                    size="small"
+                    id="nav-btn-work"
+                    startIcon={<DoneAll />}
+                  >
+                    Work
+                  </Button>
+                </Link>
+                <Link to="contact">
+                  <Button
+                    size="small"
+                    id="nav-btn-contact"
+                    startIcon={<CallIcon />}
+                  >
+                    Let's Work
+                  </Button>
+                </Link>
+              </Grid>
+              <Grid item lg="2" md="1" sm="3" xs="3"></Grid>
+              <Grid item lg="1" md="1" sm="4" xs="4"></Grid>
+              <Grid
+                item
+                lg="1"
+                md="1"
+                sm="1"
+                xs="1"
+                className={classes.switchDiv}
+              >
+                {" "}
+                <Switch color="default" checked={mode} onChange={handleMode} />
+              </Grid>
+            </Grid>
           </div>
         </Toolbar>
       </AppBar>
@@ -208,7 +248,7 @@ export default function PersistentDrawerLeft(props) {
               <HomeIcon />
             </ListItemIcon>
             <Link to="/">
-              <ListItemText primary="Home" />
+              <ListItemText className={classes.a} primary="Home" />
             </Link>
           </ListItem>
 
@@ -217,7 +257,7 @@ export default function PersistentDrawerLeft(props) {
               <AccountCircleIcon />
             </ListItemIcon>
             <Link to="about">
-              <ListItemText primary="About Me" />
+              <ListItemText className={classes.a} primary="About Me" />
             </Link>
           </ListItem>
           <ListItem button>
