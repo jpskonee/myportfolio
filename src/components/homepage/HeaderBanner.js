@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.6",
     [theme.breakpoints.down("xs")]: {
       // display: "none",
-      width: "4rem",
+      width: "3rem",
       position: "absolute",
       left: "6px",
       bottom: "10px",
@@ -88,8 +88,8 @@ const HeaderBanner = () => {
       className={`${classes.root} glass-bg`}
     >
       <Grid container className={classes.centerEvery}>
-        <Grid item md="1" xs="12" sm="1"></Grid>
-        <Grid className={classes.textPart} item xs="12" md="6" sm="6">
+        <Grid item md={1} xs={12} sm={1}></Grid>
+        <Grid className={classes.textPart} item xs={12} md={6} sm={6}>
           <div className={classes.namePart}>
             <div className={classes.imText}> I'm a: </div>
             <div className={classes.realTypingAnim}>
@@ -106,7 +106,7 @@ const HeaderBanner = () => {
             </div>
           </div>
         </Grid>
-        <Grid item md="3" xs="12" sm="4">
+        <Grid item md={3} xs={12} sm={4}>
           <div className={classes.centerEvery}>
             {" "}
             <img
@@ -124,7 +124,7 @@ const HeaderBanner = () => {
             </div>
           </div>
         </Grid>
-        <Grid item md="1" xs="12" sm="1"></Grid>
+        <Grid item md={1} xs={12} sm={1}></Grid>
       </Grid>
     </div>
   );

@@ -164,7 +164,7 @@ export default function PersistentDrawerLeft(props) {
           </IconButton>
           <div className={classes.appbarMenu}>
             <Grid container>
-              <Grid item lg="3" md="3" sm="9" xs="8">
+              <Grid item lg={3} md={3} sm={9} xs={8}>
                 <Link to="/">
                   <div className="page-logo-div">
                     <img className="page-logo" src={logo} alt="logo" />
@@ -177,10 +177,10 @@ export default function PersistentDrawerLeft(props) {
               <Grid
                 item
                 className={classes.appBarElement}
-                lg="6"
-                md="7"
-                sm="1"
-                xs="0"
+                lg={6}
+                md={7}
+                sm={1}
+                xs={1}
               >
                 <Link to="about">
                   <Button
@@ -219,13 +219,13 @@ export default function PersistentDrawerLeft(props) {
                   </Button>
                 </Link>
               </Grid>
-              <Grid item lg="2" md="1" sm="1" xs="1"></Grid>
+              <Grid item lg={2} md={1} sm={1} xs={1}></Grid>
               <Grid
                 item
-                lg="1"
-                md="1"
-                sm="2"
-                xs="3"
+                lg={1}
+                md={1}
+                sm={2}
+                xs={3}
                 className={classes.switchDiv}
               >
                 <NightsStayIcon

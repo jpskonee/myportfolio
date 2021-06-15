@@ -16,7 +16,7 @@ import { ThemeProvider, createMuiTheme, Paper } from "@material-ui/core";
 import "../src/styles/scss/app.scss";
 
 const useStyles = makeStyles((theme) => ({
-  root: { },
+  root: {},
   [theme.breakpoints.down("xs")]: {
     padding: "0",
     margin: "0",
@@ -38,8 +38,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <Paper>
         <NavBar mode={mode} setMode={setMode}>
-          <Switch>
-            <Container className={`${classes.root}`} maxWidth="lg">
+          <Container className={`${classes.root}`} maxWidth="lg">
+            <Switch>
               <Route exact component={ContactUs} path="/contact" />
               <Route exact component={AboutUs} path="/about" />
               <Route exact component={Projects} path="/Projects" />
@@ -48,8 +48,8 @@ function App() {
               <Route exact component={Testimonial} path="/testimonials" />
               <Route exact component={HomePage} path="/" />
               <Route exact component={HomePage} path="/404" />
-            </Container>
-          </Switch>
+            </Switch>
+          </Container>
         </NavBar>
       </Paper>
     </ThemeProvider>
