@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   realTypingAnim: {
-    fontSize: "3.5rem",
+    fontSize: "4rem",
     color: "#f50057",
     [theme.breakpoints.down("sm")]: {
       fontSize: "2rem",
@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   proImg: {
-    width: "350px",
-    height: "300px",
+    width: "400px",
+    height: "350px",
     [theme.breakpoints.down("xs")]: {
       borderRadius: "0 0 0 0px",
       width: "200px",
@@ -61,9 +61,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   root: {
-    margin: "0.8rem",
-    padding: "15px 0",
-    [theme.breakpoints.down("xs")]: {
+    padding: "0 0",
+    margin: "0.1rem",
+    [theme.breakpoints.down("sm")]: {
       padding: "0",
       margin: "0",
     },
@@ -72,9 +72,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: "2.5rem 0",
+    maxWidth: "100%",
+    padding: "1.8rem ",
     [theme.breakpoints.down("xs")]: {
       padding: "0.5rem 0",
+      margin: "0",
     },
   },
 }));
@@ -88,8 +90,7 @@ const HeaderBanner = () => {
       className={`${classes.root} glass-bg`}
     >
       <Grid container className={classes.centerEvery}>
-        <Grid item md={1} xs={12} sm={1}></Grid>
-        <Grid className={classes.textPart} item xs={12} md={6} sm={6}>
+        <Grid className={classes.textPart} item xs={12} md={7}>
           <div className={classes.namePart}>
             <div className={classes.imText}> I'm a: </div>
             <div className={classes.realTypingAnim}>
@@ -106,7 +107,7 @@ const HeaderBanner = () => {
             </div>
           </div>
         </Grid>
-        <Grid item md={3} xs={12} sm={4}>
+        <Grid item md={5} xs={12}>
           <div className={classes.centerEvery}>
             {" "}
             <img
@@ -124,7 +125,6 @@ const HeaderBanner = () => {
             </div>
           </div>
         </Grid>
-        <Grid item md={1} xs={12} sm={1}></Grid>
       </Grid>
     </div>
   );

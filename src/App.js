@@ -16,10 +16,11 @@ import { ThemeProvider, createMuiTheme, Paper } from "@material-ui/core";
 import "../src/styles/scss/app.scss";
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
-  [theme.breakpoints.down("xs")]: {
-    padding: "0",
-    margin: "0",
+  root: {
+    [theme.breakpoints.down("xs")]: {
+      padding: "0",
+      margin: "0.1rem",
+    },
   },
 }));
 
