@@ -28,7 +28,8 @@ const Homepage = () => {
   const classes = useStyles();
 
   const { test } = useContext(StateContext);
-  
+
+  console.log(test);
 
   return (
     <div className={classes.root}>
