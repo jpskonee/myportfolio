@@ -38,9 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   proImg: {
     width: "350px",
-    height: "320px",
-    borderRadius: "0 0 150px 0",
-    opacity: "1.8",
+    height: "300px",
     [theme.breakpoints.down("xs")]: {
       borderRadius: "0 0 0 0px",
       width: "200px",
@@ -74,8 +72,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: "3rem",
-    width: "100%",
+    padding: "2.5rem 0",
     [theme.breakpoints.down("xs")]: {
       padding: "0.5rem 0",
     },

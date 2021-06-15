@@ -24,6 +24,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import CreateNewFolderIcon from "@material-ui/icons/CreateNewFolder";
 import CloseIcon from "@material-ui/icons/Close";
 import logo from "../assest/agho_dev.png";
+import NightsStayIcon from "@material-ui/icons/NightsStay";
 
 const drawerWidth = 260;
 
@@ -103,10 +104,19 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
     alignItems: "center",
+    padding: "0 3.5rem",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
   },
+
+  modeIcon: {
+    color: theme.palette.default,
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
+
   switchDiv: {
     display: "flex",
     justifyContent: "center",
@@ -154,7 +164,7 @@ export default function PersistentDrawerLeft(props) {
           </IconButton>
           <div className={classes.appbarMenu}>
             <Grid container>
-              <Grid item lg="1" md="1" sm="1" xs="1">
+              <Grid item lg="3" md="3" sm="9" xs="8">
                 <Link to="/">
                   <div className="page-logo-div">
                     <img className="page-logo" src={logo} alt="logo" />
@@ -164,14 +174,13 @@ export default function PersistentDrawerLeft(props) {
                 </Typography> */}
                 </Link>
               </Grid>
-              <Grid item lg="3" md="2" sm="3" xs="3"></Grid>
               <Grid
                 item
                 className={classes.appBarElement}
-                lg="4"
-                md="6"
-                sm="4"
-                xs="4"
+                lg="6"
+                md="7"
+                sm="1"
+                xs="0"
               >
                 <Link to="about">
                   <Button
@@ -210,18 +219,21 @@ export default function PersistentDrawerLeft(props) {
                   </Button>
                 </Link>
               </Grid>
-              <Grid item lg="2" md="1" sm="3" xs="3"></Grid>
-              <Grid item lg="1" md="1" sm="4" xs="4"></Grid>
+              <Grid item lg="2" md="1" sm="1" xs="1"></Grid>
               <Grid
                 item
                 lg="1"
                 md="1"
-                sm="1"
-                xs="1"
+                sm="2"
+                xs="3"
                 className={classes.switchDiv}
               >
-                {" "}
-                <Switch color="default" checked={mode} onChange={handleMode} />
+                <NightsStayIcon
+                  className={classes.modeIcon}
+                  color="action"
+                  size="small"
+                />
+                <Switch checked={mode} onChange={handleMode} />
               </Grid>
             </Grid>
           </div>

@@ -13,6 +13,8 @@ import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme, Paper } from "@material-ui/core";
 
+import "../src/styles/scss/app.scss";
+
 const useStyles = makeStyles((theme) => ({
   [theme.breakpoints.down("xs")]: {
     root: {
