@@ -1,9 +1,9 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
-import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core";
 import profilepics from "../assest/agho1.png";
 import sqauredots from "../assest/square-dots.png";
+import { Button, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   namePart: {
@@ -22,10 +22,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   realTypingAnim: {
-    fontSize: "4rem",
+    fontSize: "3.5rem",
     color: "#f50057",
+    fontStyle: "cursive",
+    fontWeight: "bolder",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "2rem",
+      fontSize: "1.6rem",
     },
   },
   textPart: {
@@ -79,6 +81,15 @@ const useStyles = makeStyles((theme) => ({
       margin: "0",
     },
   },
+  hireMeBtn: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "2.5rem 0 1.5rem",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
+  },
 }));
 
 const HeaderBanner = () => {
@@ -92,16 +103,21 @@ const HeaderBanner = () => {
       <Grid container className={classes.centerEvery}>
         <Grid className={classes.textPart} item xs={12} md={7}>
           <div className={classes.namePart}>
-            <div className={classes.imText}> I'm a: </div>
+            <div className={classes.imText}> I'm: </div>
             <div className={classes.realTypingAnim}>
               <ReactTypingEffect
                 typingDelay="500ms"
                 text={[
-                  "Software Engineer.",
-                  "Product Designer.",
-                  "I.T Consultant.",
-                  "STEM Educator.",
-                  "Technopreneur.",
+                  "Agho Emmanuel .E.",
+                  "A Software Engineer.",
+                  "Agho Emmanuel.",
+                  "A Product Designer.",
+                  "Agho Emmanuel.",
+                  "An I.T Consultant.",
+                  "Agho Emmanuel.",
+                  "A STEM Educator.",
+                  "Agho Emmanuel.",
+                  "A Technopreneur.",
                 ]}
               />
             </div>
@@ -124,6 +140,17 @@ const HeaderBanner = () => {
               />{" "}
             </div>
           </div>
+        </Grid>
+        <Grid className={classes.hireMeBtn} xs={12}>
+          <Button
+            href="https://wa.link/d2xeue"
+            variant="contained"
+            color="secondary"
+            size="medium"
+            id="nav-btn-contact"
+          >
+            Hire Me
+          </Button>
         </Grid>
       </Grid>
     </div>
