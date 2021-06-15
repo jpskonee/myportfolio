@@ -210,7 +210,7 @@ export default function PersistentDrawerLeft(props) {
                   </Button>
                 </Link>
                 <Button
-                  href="https://wa.me/080955471452?text=Hello%20Agho%2C%20I%20want%20you%20to%20work%20on%20"
+                  href="https://wa.link/d2xeue"
                   variant="contained"
                   color="secondary"
                   size="medium"

@@ -31,7 +31,7 @@ const Homepage = () => {
       <HeaderBanner />
       {/* <SkillsTab /> */}
       <div className={classes.chatMe}>
-        <a href="https://wa.me/080955471452?text=Hello%20Agho%2C%20I%20want%20you%20to%20work%20on%20">
+        <a href="https://wa.link/d2xeue">
           <img className={classes.chatMeImg} src={chatme} alt="chat me now" />
         </a>
       </div>
