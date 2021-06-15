@@ -87,10 +87,6 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
-  a: {
-    color: "black",
-    textDecoration: "none",
-  },
   appbarMenu: {
     color: "white",
     width: "100%",
@@ -121,6 +117,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+  },
+  hireMeTogNav: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "2rem auto 4.5rem",
   },
 }));
 
@@ -260,7 +262,9 @@ export default function PersistentDrawerLeft(props) {
               <HomeIcon />
             </ListItemIcon>
             <Link to="/">
-              <ListItemText className={classes.a} primary="Home" />
+              <Button variant="contaned" fullWidth="true" size="medium">
+                Home
+              </Button>
             </Link>
           </ListItem>
 
@@ -268,47 +272,58 @@ export default function PersistentDrawerLeft(props) {
             <ListItemIcon>
               <AccountCircleIcon />
             </ListItemIcon>
-            <Link to="about">
-              <ListItemText className={classes.a} primary="About Me" />
+            <Link to="/about">
+              <Button variant="contaned" fullWidth="true" size="medium">
+                About Me
+              </Button>
             </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <CodeIcon />
             </ListItemIcon>
-            <Link to="skills">
-              <ListItemText primary="Skills" />
+            <Link to="/skills">
+              <Button variant="contaned" fullWidth="true" size="medium">
+                My Skills
+              </Button>
             </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <DoneAll />
             </ListItemIcon>
-            <Link to="work">
-              <ListItemText primary="Recent Work" />
+            <Link to="/work">
+              <Button variant="contaned" fullWidth="true" size="medium">
+                Recent Works
+              </Button>
             </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <CreateNewFolderIcon />
             </ListItemIcon>
-            <Link to="projects">
-              <ListItemText primary="Start Up Projects" />
+            <Link to="/projects">
+              <Button variant="contaned" fullWidth="true" size="medium">
+                My Projects
+              </Button>
             </Link>
           </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <CallIcon />
-            </ListItemIcon>
-            <Link to="contact">
-              <ListItemText primary="Let's Work" />
-            </Link>
-          </ListItem>
+          <div className={classes.hireMeTogNav}>
+            <Button
+              href="https://wa.link/d2xeue"
+              variant="contained"
+              color="secondary"
+              size="medium"
+              id="nav-btn-contact"
+            >
+              Hire Me
+            </Button>
+          </div>
         </List>
         <Divider />
         <List>
           <ListItem>
-            <Typography variant="h6"> Social Media</Typography>
+            <Typography variant="h6"> Connect With Me</Typography>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
