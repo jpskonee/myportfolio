@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   realTypingAnim: {
     fontSize: "3.5rem",
-    color: "teal",
+    color: "#f50057",
     [theme.breakpoints.down("sm")]: {
       fontSize: "2rem",
     },

@@ -35,7 +35,9 @@ const Homepage = () => {
       <HeaderBanner />
       {/* <SkillsTab /> */}
       <div className={classes.chatMe}>
-        <img className={classes.chatMeImg} src={chatme} alt="chat me now" />
+        <a href="https://wa.me/080955471452?text=Hello%20Agho%2C%20I%20want%20you%20to%20work%20on%20">
+          <img className={classes.chatMeImg} src={chatme} alt="chat me now" />
+        </a>
       </div>
       <canvas id="nokey" width="800" height="800" className={`butterflyDiv`}>
         <img

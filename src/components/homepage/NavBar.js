@@ -209,15 +209,15 @@ export default function PersistentDrawerLeft(props) {
                     Work
                   </Button>
                 </Link>
-                <Link to="contact">
-                  <Button
-                    size="small"
-                    id="nav-btn-contact"
-                    startIcon={<CallIcon />}
-                  >
-                    Let's Work
-                  </Button>
-                </Link>
+                <Button
+                  href="https://wa.me/080955471452?text=Hello%20Agho%2C%20I%20want%20you%20to%20work%20on%20"
+                  variant="contained"
+                  color="secondary"
+                  size="medium"
+                  id="nav-btn-contact"
+                >
+                  Hire Me
+                </Button>
               </Grid>
               <Grid item lg={2} md={1} sm={1} xs={1}></Grid>
               <Grid
@@ -233,7 +233,7 @@ export default function PersistentDrawerLeft(props) {
                   color="action"
                   size="small"
                 />
-                <Switch checked={mode} onChange={handleMode} />
+                <Switch color="default" checked={mode} onChange={handleMode} />
               </Grid>
             </Grid>
           </div>
