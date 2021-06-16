@@ -49,6 +49,7 @@ function App() {
               <Route exact component={Testimonial} path="/testimonials" />
               <Route exact component={HomePage} path="/" />
               <Route exact component={HomePage} path="/404" />
+              {/* <Route exact component={HomePage} path="/www.google.com/" /> */}
             </Switch>
           </Container>
         </NavBar>

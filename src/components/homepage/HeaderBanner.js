@@ -5,6 +5,7 @@ import profilepics from "../assest/agho1.png";
 import sqauredots from "../assest/square-dots.png";
 import { Grid } from "@material-ui/core";
 import HireMeBtn from "../Partials/HireMeBtn";
+import SocialMediaIcons from "../Partials/SocialMediaIcons";
 
 const useStyles = makeStyles((theme) => ({
   namePart: {
@@ -12,14 +13,23 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    marginBottom: "2rem",
+    [theme.breakpoints.up("sm")]: {
+      marginBottom: "10rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "2rem",
+    },
   },
   imText: {
-    fontSize: "4rem",
+    fontSize: "3.5rem",
     fontFamily: "cursive",
     opacity: "0.8",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
+    },
+    [theme.breakpoints.only("sm")]: {
+      fontSize: "2.5rem",
+      marginTop: "2rem",
     },
   },
   realTypingAnim: {
@@ -30,7 +40,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("md")]: {
       fontSize: "3rem",
     },
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.only("sm")]: {
+      fontSize: "2.8rem",
+    },
+    [theme.breakpoints.down("xs")]: {
       fontSize: "1.6rem",
     },
   },
@@ -41,32 +54,61 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: "2.5rem",
     },
   },
+  proImgDiv: {
+    display: "flex",
+    justifyContent: "left",
+    alignItems: "center",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
+  },
   proImg: {
-    width: "400px",
+    width: "280px",
     height: "350px",
-    [theme.breakpoints.down("xs")]: {
-      borderRadius: "0 0 0 0px",
-      width: "200px",
+    zIndex: "5  ",
+    marginLeft: "2rem",
+    [theme.breakpoints.only("md")]: {
+      width: "250px",
+      height: "300px",
+      marginRight: "5rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "120px",
       height: "150px",
     },
   },
   squareDots: {
-    width: "8rem",
+    width: "7.5rem",
     position: "absolute",
     left: "40px",
     bottom: "3.2rem",
     opacity: "0.5",
+    [theme.breakpoints.only("sm")]: {
+      // display: "none",
+      width: "6rem",
+    },
     [theme.breakpoints.down("xs")]: {
       // display: "none",
-      width: "3rem",
+      width: "4rem",
       position: "absolute",
       left: "6px",
       bottom: "10px",
       opacity: "0.5",
     },
   },
+  smIcons: {
+    position: "absolute",
+    right: "1rem",
+    bottom: "10rem",
+    zIndex: "0",
+
+    [theme.breakpoints.down("xs")]: {
+      // display: "none",
+      display: "none",
+    },
+  },
   root: {
-    padding: "0 0",
+    padding: "2.5rem 0",
     margin: "0.1rem",
     [theme.breakpoints.down("sm")]: {
       padding: "0",
@@ -81,16 +123,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "1.8rem 1.5rem 3.5rem",
     [theme.breakpoints.down("xs")]: {
       padding: "0.5rem 0",
-      margin: "0 0 2.5rem",
-    },
-  },
-  hireMeBtnMob: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "2.5rem 0 1.5rem",
-    [theme.breakpoints.up("md")]: {
-      display: "none",
+      margin: "0 0 1.5rem",
     },
   },
   seniorTxtPart: {
@@ -98,17 +131,23 @@ const useStyles = makeStyles((theme) => ({
       position: "absolute",
       left: "0",
       bottom: "0",
-      marginBottom: "4rem",
+      marginBottom: "3.8rem",
       marginLeft: "10.5rem",
     },
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      marginTop: "2rem",
     },
-    subtitle1: {
-      fontSize: "50rem",
+  },
+  hireMeBtnSep: {
+    [theme.breakpoints.up("sm")]: {
+      marginTop: "0.5rem",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginTop: "1.0rem",
     },
   },
 }));
@@ -132,20 +171,20 @@ const HeaderBanner = () => {
                   "Agho Emmanuel",
                   "A Software Engr.",
                   "Agho Emmanuel",
+                  "A Mobile Developer",
+                  "Agho Emmanuel",
                   "A Product Designer.",
                   "Agho Emmanuel",
                   "An I.T Consultant.",
                   "Agho Emmanuel",
                   "A STEM Educator.",
-                  "Agho Emmanuel",
-                  "A Technopreneur.",
                 ]}
               />
             </div>
           </div>
         </Grid>
         <Grid item md={5} xs={12}>
-          <div className={classes.gridRoot}>
+          <div className={classes.proImgDiv}>
             {" "}
             <img
               className={classes.proImg}
@@ -164,7 +203,7 @@ const HeaderBanner = () => {
         </Grid>
         <div>
           <div className={classes.seniorTxtPart}>
-            <Typography variant="subtitle1">
+            <Typography variant="subtitle2">
               {" "}
               Senior Product and Software Developer{" "}
             </Typography>
@@ -172,9 +211,12 @@ const HeaderBanner = () => {
               {" "}
               Web | Mobile | Start Ups{" "}
             </Typography>
-            <div style={{ marginTop: "0.5rem" }}>
+            <div className={classes.hireMeBtnSep}>
               <HireMeBtn />
             </div>
+          </div>
+          <div className={classes.smIcons}>
+            <SocialMediaIcons />
           </div>
         </div>
         {/* <Grid className={classes.hireMeBtnMob} xs={12}>

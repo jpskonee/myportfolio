@@ -12,7 +12,6 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import { Link } from "react-router-dom";
 import { Button, Switch, Grid } from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
@@ -24,6 +23,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import logo from "../assest/agho_dev.png";
 import NightsStayIcon from "@material-ui/icons/NightsStay";
 import HireMeBtn from "../Partials/HireMeBtn";
+import SocialMediaIcons from "../Partials/SocialMediaIcons";
 
 const drawerWidth = 260;
 
@@ -121,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "2rem auto 4.5rem",
+    margin: "2rem auto",
   },
 }));
 
@@ -303,17 +303,14 @@ export default function PersistentDrawerLeft(props) {
         <Divider />
         <List>
           <ListItem>
-            <Typography variant="h6"> Connect With Me</Typography>
+            <Typography variant="subtitle1"> Connect With Me</Typography>
           </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <InboxIcon />
-              <InboxIcon />
-              <InboxIcon />
-              <InboxIcon />
-              <InboxIcon />
-            </ListItemIcon>
-          </ListItem>
+          <SocialMediaIcons
+            facebook="Facebook"
+            linkedIn="LinkedIn"
+            twitter="Twitter"
+            gitHub="GitHub"
+          />
         </List>
       </Drawer>
       <main
