@@ -1,9 +1,10 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 import profilepics from "../assest/agho1.png";
 import sqauredots from "../assest/square-dots.png";
-import { Button, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
+import HireMeBtn from "../Partials/HireMeBtn";
 
 const useStyles = makeStyles((theme) => ({
   namePart: {
@@ -35,8 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   textPart: {
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: "column",
     [theme.breakpoints.down("xs")]: {
       paddingTop: "2.5rem",
     },
@@ -51,11 +51,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   squareDots: {
-    width: "7rem",
+    width: "8rem",
     position: "absolute",
     left: "40px",
-    bottom: "40px",
-    opacity: "0.6",
+    bottom: "3.2rem",
+    opacity: "0.5",
     [theme.breakpoints.down("xs")]: {
       // display: "none",
       width: "3rem",
@@ -73,24 +73,42 @@ const useStyles = makeStyles((theme) => ({
       margin: "0",
     },
   },
-  centerEvery: {
+  gridRoot: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     maxWidth: "100%",
-    padding: "1.8rem ",
+    padding: "1.8rem 1.5rem 3.5rem",
     [theme.breakpoints.down("xs")]: {
       padding: "0.5rem 0",
-      margin: "0",
+      margin: "0 0 2.5rem",
     },
   },
-  hireMeBtn: {
+  hireMeBtnMob: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     padding: "2.5rem 0 1.5rem",
     [theme.breakpoints.up("md")]: {
       display: "none",
+    },
+  },
+  seniorTxtPart: {
+    [theme.breakpoints.up("md")]: {
+      position: "absolute",
+      left: "0",
+      bottom: "0",
+      marginBottom: "4rem",
+      marginLeft: "10.5rem",
+    },
+    [theme.breakpoints.down("md")]: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    subtitle1: {
+      fontSize: "50rem",
     },
   },
 }));
@@ -103,7 +121,7 @@ const HeaderBanner = () => {
       style={{ position: "relative" }}
       className={`${classes.root} glass-bg`}
     >
-      <Grid container className={classes.centerEvery}>
+      <Grid container className={classes.gridRoot}>
         <Grid className={classes.textPart} item xs={12} md={7}>
           <div className={classes.namePart}>
             <div className={classes.imText}> I'm: </div>
@@ -127,7 +145,7 @@ const HeaderBanner = () => {
           </div>
         </Grid>
         <Grid item md={5} xs={12}>
-          <div className={classes.centerEvery}>
+          <div className={classes.gridRoot}>
             {" "}
             <img
               className={classes.proImg}
@@ -144,17 +162,24 @@ const HeaderBanner = () => {
             </div>
           </div>
         </Grid>
-        <Grid className={classes.hireMeBtn} xs={12}>
-          <Button
-            href="https://wa.link/d2xeue"
-            variant="contained"
-            color="secondary"
-            size="medium"
-            id="nav-btn-contact"
-          >
-            Hire Me
-          </Button>
-        </Grid>
+        <div>
+          <div className={classes.seniorTxtPart}>
+            <Typography variant="subtitle1">
+              {" "}
+              Senior Product and Software Developer{" "}
+            </Typography>
+            <Typography variant="subtitle2">
+              {" "}
+              Web | Mobile | Start Ups{" "}
+            </Typography>
+            <div style={{ marginTop: "0.5rem" }}>
+              <HireMeBtn />
+            </div>
+          </div>
+        </div>
+        {/* <Grid className={classes.hireMeBtnMob} xs={12}>
+          <HireMeBtn />
+        </Grid> */}
       </Grid>
     </div>
   );

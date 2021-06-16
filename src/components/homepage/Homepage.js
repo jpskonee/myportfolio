@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     width: "4.5rem",
     height: "4.5rem",
     [theme.breakpoints.down("xs")]: {
-      width: "2.5rem",
-      height: "2.5rem",
+      width: "2.2rem",
+      height: "2.2rem",
     },
   },
 }));
@@ -28,7 +28,6 @@ const Homepage = () => {
   const classes = useStyles();
 
   const { test } = useContext(StateContext);
-
   console.log(test);
 
   return (

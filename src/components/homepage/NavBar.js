@@ -23,6 +23,7 @@ import CreateNewFolderIcon from "@material-ui/icons/CreateNewFolder";
 import CloseIcon from "@material-ui/icons/Close";
 import logo from "../assest/agho_dev.png";
 import NightsStayIcon from "@material-ui/icons/NightsStay";
+import HireMeBtn from "../Partials/HireMeBtn";
 
 const drawerWidth = 260;
 
@@ -169,9 +170,6 @@ export default function PersistentDrawerLeft(props) {
                   <div className="page-logo-div">
                     <img className="page-logo" src={logo} alt="logo" />
                   </div>
-                  {/* <Typography variant="h5" noWrap>
-                  AGHO.DEV
-                </Typography> */}
                 </Link>
               </Grid>
               <Grid
@@ -188,7 +186,7 @@ export default function PersistentDrawerLeft(props) {
                     id="nav-btn-about"
                     startIcon={<AccountCircleIcon />}
                   >
-                    About Us
+                    About Me
                   </Button>
                 </Link>
                 <Link to="skills">
@@ -209,15 +207,7 @@ export default function PersistentDrawerLeft(props) {
                     Work
                   </Button>
                 </Link>
-                <Button
-                  href="https://wa.link/d2xeue"
-                  variant="contained"
-                  color="secondary"
-                  size="medium"
-                  id="nav-btn-contact"
-                >
-                  Hire Me
-                </Button>
+                <HireMeBtn />
               </Grid>
               <Grid item lg={2} md={1} sm={1} xs={1}></Grid>
               <Grid
@@ -307,15 +297,7 @@ export default function PersistentDrawerLeft(props) {
             </Link>
           </ListItem>
           <div className={classes.hireMeTogNav}>
-            <Button
-              href="https://wa.link/d2xeue"
-              variant="contained"
-              color="secondary"
-              size="medium"
-              id="nav-btn-contact"
-            >
-              Hire Me
-            </Button>
+            <HireMeBtn />
           </div>
         </List>
         <Divider />
