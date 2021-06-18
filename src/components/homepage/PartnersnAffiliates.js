@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
   gridRoot: {
     display: "flex",
     justifyContent: "center",
+    boxShadow: "0px 0px 50px 16px lightgray",
   },
   gridImg: {
     width: "8rem",
