@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./components/homepage/NavBar";
 import { Switch, Route } from "react-router-dom";
 import ContactUs from "../src/components/Contact us/ContactUs";
-import AboutUs from "../src/components/About Us/AboutUs";
+import AboutMe from "./components/About Me/AboutMe";
 import Projects from "../src/components/Projects/Projects";
 import RecentWork from "../src/components/Projects/RecentWork";
 import SkillsTab from "../src/components/Skills/SkillsTab";
@@ -42,7 +42,7 @@ function App() {
           <Container className={`${classes.root}`} maxWidth="lg">
             <Switch>
               <Route exact component={ContactUs} path="/contact" />
-              <Route exact component={AboutUs} path="/about" />
+              <Route exact component={AboutMe} path="/about" />
               <Route exact component={Projects} path="/projects" />
               <Route exact component={RecentWork} path="/work" />
               <Route exact component={SkillsTab} path="/skills" />

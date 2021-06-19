@@ -6,6 +6,8 @@ import { makeStyles } from "@material-ui/core";
 import { StateContext } from "../state mgt/StateProvider";
 import FixedBackground from "../Partials/FixedBackground";
 import PartnersnAffiliates from "./PartnersnAffiliates";
+import AboutUs from "../About Me/AboutMe";
+import AboutMe from "../About Me/AboutMe";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,6 +54,9 @@ const Homepage = () => {
             <PartnersnAffiliates />
           </div>
         </FixedBackground>
+      </div>
+      <div className="glass-bg">
+        <AboutMe />
       </div>
       <div className={classes.chatMe}>
         <a href="https://wa.link/d2xeue">

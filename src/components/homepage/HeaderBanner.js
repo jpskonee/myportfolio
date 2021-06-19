@@ -158,7 +158,7 @@ const HeaderBanner = () => {
   return (
     <div
       style={{ position: "relative" }}
-      className={`${classes.root} glass-bg`}
+      className={`${classes.root} glass-bg-ball`}
     >
       <Grid container className={classes.gridRoot}>
         <Grid className={classes.textPart} item xs={12} md={7}>
