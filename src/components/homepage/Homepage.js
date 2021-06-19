@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core";
 import { StateContext } from "../state mgt/StateProvider";
 import FixedBackground from "../Partials/FixedBackground";
 import PartnersnAffiliates from "./PartnersnAffiliates";
-import AboutUs from "../About Me/AboutMe";
+// import AboutUs from "../About Me/AboutMe";
 import AboutMe from "../About Me/AboutMe";
 
 const useStyles = makeStyles((theme) => ({

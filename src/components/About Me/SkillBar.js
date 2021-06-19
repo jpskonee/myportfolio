@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, IconButton, makeStyles, Typography } from "@material-ui/core";
+import { IconButton, makeStyles, Typography } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 const SkillBar = (props) => {
